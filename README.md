@@ -32,6 +32,7 @@
 * Native, Shadow & Virtual DOM
 * XML & JSX Syntax
 * Rendering
+
 #2. Component:
 * Class & Function component
 * State, Props & Lifecycle
@@ -39,6 +40,7 @@
 * Conditional Rendering
 * Difference between html and react component tag
 * Controlled & Uncontrolled Components
+
 #3. Form:
 * Input Tag & Handling Change Event ( single input and mutiple inputs )
 * The difference of textarea, select tag , file tag
@@ -57,5 +59,4 @@
 * Store
 * Action
 * Reducer
----
 
