@@ -13,16 +13,14 @@
     "react-scripts": "3.3.0"
   },
   "scripts": {
+    "prettier": "prettier --write 'src/**/*.{js,json,jsx,html,css,scss}'",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "npm run tslint \"Client/**/*.ts\"",
+    "lint": "eslint src/**/*.js",
     "precommit": "npm run lint && npm test",
     "prepush": "npm run lint",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -36,8 +34,18 @@
       "last 1 safari version"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint  && npm run prettier"
+    }
+  },
   "devDependencies": {
     "eslint": "^6.7.2",
-    "husky": "^3.1.0"
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.17.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0"
   }
 }
