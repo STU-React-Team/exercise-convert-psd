@@ -1,0 +1,244 @@
+$small-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 992px;
+$desktopLarge-width: 1200px;
+
+@mixin small {
+  @media (min-width: #{$small-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktopLarge {
+  @media (min-width: #{$desktopLarge-width}) {
+    @content;
+  }
+}
+
+html {
+  font-size: 2px;
+  @include small {
+    font-size: 8px;
+  }
+  @include tablet {
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 18px;
+  }
+  @include desktopLarge {
+    font-size: 25px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 2vw;
+  @include desktop {
+    padding: 0;
+    max-width: 940px;
+  }
+}
+
+.title {
+  span {
+    font-size: 30pt;
+    font-family: 'Brandon Grotesque Bold';
+    &:first-child {
+      font-family: 'Brandon Grotesque Light';
+    }
+    @include small {
+      font-size: 38pt;
+    }
+    @include tablet {
+      font-size: 48pt;
+    }
+    @include desktop {
+      font-size: 58pt;
+    }
+    @include desktopLarge {
+      font-size: 60pt;
+    }
+  }
+}
+
+.header {
+  position: relative;
+
+  &-menu {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    @include tablet {
+      padding: 0;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: transparent;
+    }
+    @include desktop {
+      top: 20px;
+    }
+    @include desktopLarge {
+      top: 40px;
+    }
+
+    nav {
+      position: absolute;
+      background-color: blue;
+      top: 100%;
+      right: 0;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      display: none;
+      &.active {
+        display: block;
+      }
+      @include tablet {
+        width: auto;
+        margin-left: auto;
+        display: block;
+        position: static;
+        background-color: transparent;
+        ul {
+          display: flex;
+        }
+      }
+
+      li {
+        padding: 10px;
+        color: #fff;
+        border-top: 1px solid #fff;
+        cursor: pointer;
+        &:hover {
+          color: #232323;
+          background-color: #f8f5f4;
+        }
+        @include tablet {
+          border-top: none;
+          font-family: 'Brandon Grotesque Medium';
+          font-size: 18pt;
+        }
+      }
+    }
+  }
+
+  &-logo {
+    width: 200px;
+  }
+
+  &-mobile {
+    margin-left: auto;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &-banner {
+    width: 100%;
+    height: 44.3vw;
+    background-image: url(../assets/images/Image.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  &-cap {
+    position: absolute;
+    width: 90vw;
+    text-align: center;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    @include small {
+      top: 65%;
+    }
+    @include tablet {
+      top: 50%;
+    }
+
+    h6 {
+      font-size: 12pt;
+      font-family: 'Brandon Grotesque Light';
+      @include small {
+        font-size: 17pt;
+      }
+      @include tablet {
+        font-size: 20pt;
+      }
+      @include desktop {
+        font-size: 25pt;
+      }
+      @include desktopLarge {
+        font-size: 32pt;
+      }
+    }
+
+    h4 {
+      font-size: 20pt;
+      margin: 1.6rem 0 2.8rem 0;
+      font-family: 'Brandon Grotesque Bold';
+      @include small {
+        font-size: 28pt;
+      }
+      @include tablet {
+        font-size: 36pt;
+      }
+      @include desktop {
+        font-size: 44pt;
+      }
+      @include desktopLarge {
+        font-size: 60pt;
+      }
+    }
+
+    button {
+      font-family: 'Brandon Grotesque Bold', sans-serif;
+      font-size: 10pt;
+      background-color: transparent;
+      outline: none;
+      border: 1px solid #fff;
+      border-radius: 3px;
+      color: #fff;
+      padding: 1rem 3.2rem;
+      cursor: pointer;
+      @include small {
+        font-size: 12pt;
+      }
+      @include tablet {
+        border-width: 2px;
+        font-size: 15pt;
+      }
+      @include desktop {
+        font-size: 20pt;
+      }
+      @include desktopLarge {
+        font-size: 23pt;
+      }
+    }
+  }
+}
