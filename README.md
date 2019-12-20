@@ -8,15 +8,10 @@
     - NodeJS
     - Git
     - Editor (VSCode)
+    - Plugin Cho Editor:
+      - Prettier
+      - Eslint
     - Các tool hỗ trợ code ReactJS
----
-* Cài đặt project
-```
-    git clone https://github.com/STU-React-Team/source-base-cra.git
-    cd <folder_clone>
-    npm install 
-    npm start
-```
 ---
 * Kiến thức cần nắm bắt:
     - Sử dụng photoshop cơ bản
