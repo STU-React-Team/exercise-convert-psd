@@ -1,0 +1,160 @@
+.about{
+    background-color: #efefef;
+    padding: 0 0 40px 0;
+}
+.about-head {
+    padding: 10px 0 10px 20px;
+    background-color: #D05054;
+    border-left: 8px solid #c62f31 ; 
+    text-align: left;
+    color : #fff;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+}
+.about-head > i {
+    font-size : 30px;
+    float : right;
+    margin-right : 40px;
+    width: 48px;
+    height: 48px;
+    background-color: #c62f31;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: 0.4s ease;
+}
+.about-head > .fa-arrow-up:before {
+    position: relative;
+    top: 10px;
+    left : 10px;
+}
+.about-head > i:hover {
+    opacity: 1;
+}
+
+/* About Us  */
+.about-us-content {
+    position: relative;
+    padding: 20px 0;
+}
+.about-us-who > h2, .about-us-why > h2, .about-us-teste > h2 {
+    text-align: left;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.about-us-who > p{
+    text-align: left;
+}
+.about-us-why > .whyus-list {
+    list-style: none;
+    padding-left: 10px;
+}
+.whyus-list > li {
+    text-align: left;
+    margin-bottom: 10px;
+}
+.whyus-list > li > i {
+    width: fit-content;
+    color: #c62f31;
+    margin-right: 10px;
+}
+.teste-content > p {
+    font-style: italic;
+    padding: 15px;
+    background-color: #fff;
+    margin: 0;
+}
+.wtf {
+    display: flex;
+    justify-content: center;
+
+}
+.wtf-icon {
+    width: 30px;
+    height: 30px;
+    border-top: 30px solid #fff;
+    border-left: 30px solid transparent;
+    margin-right: 10px;
+}
+.wtf-name {
+    margin: 0;
+    float: left;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 600;
+    color: #c62f31;
+    margin-top: 20px;
+    margin-right:10px;
+}
+.group-btn-swiper {
+    width: fit-content;
+    position: absolute;
+    top: 26px;
+    right : 0
+}
+.group-btn-swiper > button {
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: #cacad9;
+    color: #fff;
+    outline: none;
+    border: none;
+    z-index: 1000;
+    cursor: pointer;
+}
+.about-us-btn-prev {
+    margin-right: 10px;
+}
+/* About Team  */
+.about-team {
+    position: relative;
+    
+}
+.about-team-content {
+    padding: 20px 0;
+}
+
+
+/* About Player  */
+.about-team-player {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #ffffff;
+}
+.about-team-player > img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+    
+}
+.about-team-player > h2 {
+    font-weight: 600;
+}
+.about-team-player > h3 {
+    font-size: 20px;
+    color: #c62f31;
+}
+.about-team > .group-btn-swiper {
+    right: 30px;
+    top: 20px;
+}
+
+@media only screen and (max-width: 992px){
+    .group-btn-swiper > button {
+        padding: 20px 30px;
+    }
+    .about-team > .group-btn-swiper  {
+        right: 10px;
+        top: 6px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .group-btn-swiper > button {
+        padding: 20px 30px;
+    }
+}
+@media only screen and (max-width: 576px){
+    .group-btn-swiper > button {
+        padding: 15px 20px;
+    }
+}
+
