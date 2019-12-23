@@ -27,9 +27,9 @@ function Logo() {
 
   const [logo] = useState(dataLogo);
 
-  const listLogo = logo.map(
-    item => <LogoItem key={item.name} name={item.name} img={item.img} />
-  );
+  const listLogo = logo.map(item => (
+    <LogoItem key={item.name} name={item.name} img={item.img} />
+  ));
   return <div className="logo container">{listLogo}</div>;
 }
 
