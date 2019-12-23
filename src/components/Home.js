@@ -5,6 +5,7 @@ import Services from './services';
 import Clients from './clients';
 import Logo from './logo';
 import Team from './team';
+import Footer from './footer/Footer';
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
       <Clients />
       <Logo />
       <Team />
+      <Footer />
     </>
   );
 }
