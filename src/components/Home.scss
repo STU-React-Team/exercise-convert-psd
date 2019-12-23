@@ -629,69 +629,70 @@ html {
   padding-top: 4rem;
 
   .title {
-      p {
-          color: #fff;
-      }
+    p {
+      color: #fff;
+    }
   }
 
   &__content {
-      @include tablet {
-          display: flex;
-          justify-content: space-between;
-      }
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__item {
-      @include tablet {
-          flex-basis: 49%;
+    @include tablet {
+      flex-basis: 49%;
+    }
+    @include desktop {
+      &:last-child {
+        flex-basis: 45%;
       }
-      @include desktop {
-          &:last-child{
-              flex-basis: 45%;
-          }
-      }
+    }
   }
 
   &-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    &__social {
+      width: 250px;
       display: flex;
-      flex-wrap: wrap;
-      margin-top: 2rem;
-
-      &__social {
-          width: 250px;
-          display: flex;
-          font-size: 14pt;
-          margin-bottom: 1.6rem;
-          @include tablet {
-              font-size: 12pt;
-              flex-basis: 49%;
-          }
-          @include desktop {
-              font-size: 16pt;
-          }
-          @include desktopLarge {
-              font-size: 18pt;
-          }
-
-          div {
-              width: 30px;
-          }
+      font-size: 14pt;
+      margin-bottom: 1.6rem;
+      @include tablet {
+        font-size: 12pt;
+        flex-basis: 49%;
       }
+      @include desktop {
+        font-size: 16pt;
+      }
+      @include desktopLarge {
+        font-size: 18pt;
+      }
+
+      div {
+        width: 30px;
+      }
+    }
   }
 
-  input,textarea {
-      width: 90%;
-      border: none;
-      outline: none;
-      margin-bottom: 0.75rem;
-      padding: 10px;
-      border-radius: 2px;
+  input,
+  textarea {
+    width: 90%;
+    border: none;
+    outline: none;
+    margin-bottom: 0.75rem;
+    padding: 10px;
+    border-radius: 2px;
   }
 
   &__bottom {
-      text-align: center;
-      font-family: 'Brandon Grotesque Medium';
-      margin-top: 4rem;
-      padding-bottom: 1.25rem;
+    text-align: center;
+    font-family: 'Brandon Grotesque Medium';
+    margin-top: 4rem;
+    padding-bottom: 1.25rem;
   }
 }
