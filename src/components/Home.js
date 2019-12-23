@@ -11,7 +11,7 @@ function Home() {
       <Header />
       <Services />
       <Clients />
-      <Logo /> 
+      <Logo />
     </>
   );
 }

@@ -29,7 +29,6 @@ function Logo() {
 
   const listLogo = logo.map(
     item => <LogoItem key={item.name} name={item.name} img={item.img} />
-    // <LogoItem key={item.name} {...item}/>
   );
   return <div className="logo container">{listLogo}</div>;
 }
