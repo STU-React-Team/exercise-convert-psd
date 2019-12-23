@@ -72,6 +72,14 @@ html {
       font-size: 60pt;
     }
   }
+  p {
+    font-size: 14pt;
+    margin-top: 0.6rem;
+    color: #777;
+    @include tablet {     
+        font-size: 18pt;
+    }
+}
 }
 
 .header {
@@ -240,5 +248,113 @@ html {
         font-size: 23pt;
       }
     }
+  }
+}
+
+.services {
+  margin-top: 4rem;
+
+  &__desc {
+      color: #777;
+      font-size: 15pt;
+      @include tablet {     
+          font-size: 18pt;
+      }
+  }
+
+  &-feature {
+      &__bg {
+          background-color: #fafafa;
+          padding: 4rem 0;
+          margin-top: 4rem;
+      }
+      &__item {
+          padding: 0 1.5rem;
+          @include tablet {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+          }
+      }
+
+      &__img {
+          display: none;
+          @include tablet {
+              display: block;
+              flex-basis: 30%;
+              &--right {
+                  order: 1;
+              }
+          }
+
+          img{
+              width: 100%;
+          }
+      }
+
+      &__text {
+          @include tablet {
+              flex-basis: 65%;
+          }
+      }
+
+      &__desc{
+          margin-top: 1.75rem;
+      }
+  }
+
+  &-skills {
+      margin-top: 100px;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+
+      &__item {
+          flex-basis: 100%;
+          display: flex;
+          margin-bottom: 45px;
+          @include tablet {
+              flex-basis: 45%;
+              &:nth-child(odd) {
+                  flex-basis: 45%;
+                  margin-right: 10%;
+              }
+          }
+      }
+
+      &__text {
+          margin-left: auto;
+          flex-basis: 70%;
+          @include small {
+              flex-basis: 80%;
+          }
+          @include tablet {
+              flex-basis: 75%;
+          }
+      }
+
+      &__img {
+          width: 72px;
+          height: 72px;
+          border-radius: 50%;
+          background-color: #232323;
+          position: relative;
+
+          img{
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+          }
+      }
+
+      &__heading {
+          font-size: 22pt;
+          font-family: 'Brandon Grotesque Medium';
+      }
+
+      &__desc {
+          margin-top: 15px;
+      }
   }
 }
