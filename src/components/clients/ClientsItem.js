@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ClientsItem(props) {
+const ClientsItem = (props) => {
   const { name, desc, img, textRight } = props;
   return (
     <div className="clients__item">

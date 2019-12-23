@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import imgclient from '../../assets/images/Untitled_optimized.jpg';
-import imgclient1 from '../../assets/images/Untitled1_optimized.jpg';
-import ClientsItem from './ClientsItem';
+import imgclient from 'assets/images/Untitled_optimized.jpg';
+import imgclient1 from 'assets/images/Untitled1_optimized.jpg';
+import ClientsItem from 'components/clients/ClientsItem';
 
-function Clients() {
+const Clients = () => {
   const dataClient = [
     {
       name: '- Jamie Richardson, Founder of Cocoa Media',

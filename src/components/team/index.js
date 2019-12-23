@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import TeamItem from './TeamItem';
+import TeamItem from 'components/team/TeamItem';
 
-function Team() {
+const Team = () => {
   const dataTeam = [
     {
       name: 'Kimberly Thompson',
@@ -79,7 +79,6 @@ function Team() {
         tw={tw}
       />
     );
-    // <TeamItem key={item.name} {...item}/>
   });
 
   return (

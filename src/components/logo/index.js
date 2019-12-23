@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import Envota from '../../assets/images/Envato.png';
-import WordPress from '../../assets/images/WordPress.png';
-import Tuts from '../../assets/images/Tuts+.png';
-import Microlancer from '../../assets/images/Microlancer.png';
-import LogoItem from './LogoItem';
+import Envota from 'assets/images/Envato.png';
+import WordPress from 'assets/images/WordPress.png';
+import Tuts from 'assets/images/Tuts+.png';
+import Microlancer from 'assets/images/Microlancer.png';
+import LogoItem from 'components/logo/LogoItem';
 
-function Logo() {
+const Logo = () => {
   const dataLogo = [
     {
       img: Envota,

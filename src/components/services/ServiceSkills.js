@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ServiceSkills({ img, heading, desc }) {
+const ServiceSkills = ({ img, heading, desc }) => {
   return (
     <div className="services-skills__item">
       <div className="services-skills__img">

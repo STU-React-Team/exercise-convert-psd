@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMobileAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-function Footer() {
+const Footer = () => {
   const [state, setState] = useState({});
 
   const handleInputChange = e => {
@@ -70,12 +70,7 @@ function Footer() {
                   type="text"
                   placeholder="Your Name *"
                   name="name"
-<<<<<<< HEAD
                   value={state.name}
-=======
-                  value={state.name || ''}
->>>>>>> 83c51b4907cc2f119024cca6863ad20c166cee60
-                  onChange={handleInputChange}
                 />
               </div>
               <div>
@@ -83,11 +78,7 @@ function Footer() {
                   type="email"
                   placeholder="Your E-mail *"
                   name="email"
-<<<<<<< HEAD
                   value={state.email}
-=======
-                  value={state.email || ''}
->>>>>>> 83c51b4907cc2f119024cca6863ad20c166cee60
                   onChange={handleInputChange}
                 />
               </div>
@@ -96,11 +87,7 @@ function Footer() {
                   placeholder="Your Message *"
                   rows="8"
                   name="message"
-<<<<<<< HEAD
                   value={state.message}
-=======
-                  value={state.message || ''}
->>>>>>> 83c51b4907cc2f119024cca6863ad20c166cee60
                   onChange={handleInputChange}
                 />
               </div>
