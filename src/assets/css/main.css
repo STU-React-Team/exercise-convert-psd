@@ -1,0 +1,47 @@
+.py-10 {
+  padding: 10px 0;
+}
+.py-30 {
+  padding: 30px 0;
+}
+
+header {
+  min-height: 600px;
+  background: url('../images/banner.png') no-repeat;
+  background-size: cover;
+}
+.text-white .nav-link {
+  color: #fff;
+}
+.header .list-inline-item {
+  margin-right: 0;
+}
+.logo-text {
+  font-size: 24px;
+  padding: 10px 5px;
+}
+.banner {
+  margin: 100px 0;
+}
+.banner-text {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.banner h1 {
+  font-size: 52px;
+}
+.btn-more,
+.btn-more:hover {
+  border-radius: 3px;
+  padding: 5px 30px;
+  outline: none;
+  margin: 50px 0;
+  background: transparent;
+  border: 1px solid #fff;
+  box-shadow: none;
+}
+.btn-more,
+.btn-more:hover {
+  color: #fff;
+}
