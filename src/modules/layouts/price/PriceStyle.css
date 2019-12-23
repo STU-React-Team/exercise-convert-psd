@@ -1,0 +1,175 @@
+.price{
+    background-color: #efefef;
+    padding-bottom: 60px;
+}
+
+.row {
+    margin: 0;
+}
+.price-head {
+    padding: 10px 0 10px 20px;
+    background-color: #d34346;
+    border-left: 8px solid #c62f31 ; 
+    text-align: left;
+    color : #fff;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+}
+.price-head > i {
+    font-size : 30px;
+    float : right;
+    margin-right : 40px;
+    width: 48px;
+    height: 48px;
+    background-color: #c62f31;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: 0.4s ease;
+}
+.price-head > .fa-arrow-up:before {
+    position: relative;
+    top: 10px;
+    left : 10px;
+}
+.price-head > i:hover {
+    opacity: 1;
+}
+/* Price Detail  */
+.price-list { 
+    padding-bottom: 40px;
+}
+.price-detail {
+    margin-top: 30px;
+    height: 400px;
+}
+.price-title {
+    font-size: 18pt;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 10px 10px 10px 20px;
+    text-align: left;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+ .blue {
+    background-color: #d34346;
+    border-left: 8px solid #c62f31 ;
+}
+.red {
+    background-color: #314559;
+    border-left: 8px solid #22303e;
+}
+/* Features */
+.features {
+    padding: 10px 0;
+    background-color: #fff;
+    height: 304px;
+}
+.features > h2 {
+    font-size: 25pt;
+    color: #818d98;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+}
+.features > ul{
+    list-style: none;
+    padding: 0 10px;
+}
+.features > ul > li {
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+    margin: 0;
+}
+.list-features > li > i {
+    width: fit-content;
+    font-size : 20px;
+    margin-right : 10px;
+}
+.footer-title {
+    font-size: 18pt;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 10px 10px 10px 20px;
+    text-align: left;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Price footer  */
+.price-footer > a {
+    text-decoration: none;
+}
+.price-footer>a:hover  .footer-title{
+    opacity: 0.7;
+}
+ /* Sign Up  */
+.signup {
+    background-color: #f7f7f7;
+    padding: 40px 0;
+}
+.signup-des { 
+    padding-left: 30px;
+    min-height: 160px;
+}
+.signup-des > h2 {
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+.signup-des > p {
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16pt;
+}
+.sub {
+    height: 80px;
+    background-color: #fff;
+    margin: auto 0;
+}
+.btn-sub {
+    background-color: #d34346;
+    float: right;
+    width: 210px;
+    height: 100%;
+}
+.btn-sub > h3 {
+    margin: 0;
+    color : #fff;
+    font-weight: bold;
+    font-size : 17px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.btn-sub > h1{
+    margin: 0;
+    color : #fff;
+    font-weight: bold;
+    font-size : 30px;
+}
+
+
+@media only screen and (max-width: 1200px){
+    .features > ul > li {
+        padding: 6px 0;
+    }
+}
+@media only screen and (max-width: 992px){
+    .features > ul > li {
+        padding: 15px 0;
+    }
+    .sub {
+        margin-top : 20px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .features > ul > li {
+        padding: 15px 0;
+    }
+    .container-fluid {
+        padding: 0 0 60px 0;
+    }
+}

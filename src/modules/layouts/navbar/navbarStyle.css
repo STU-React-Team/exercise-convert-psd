@@ -1,0 +1,133 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+    font-size: 1rem;
+    padding:0;
+    margin: 0;
+    width: 100%;
+}
+
+.navbar {
+    height: 70px;
+    background-color: #d34346;
+    border-bottom: 8px solid #bd2d30;
+    padding: 0 1rem;
+}
+/* logo */
+.logo{
+    align-items: center;
+}
+.logo > h2 {
+    line-height: 60px;
+    width: 100%;
+    color: #fff;
+    font-weight: 900;
+}
+/* menu-list-nav  */
+.menu-list > ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    color: #fff;
+    font-weight: 600;
+    height: 70px;
+    margin: 0;
+}
+.menu-list > ul > li {
+    height: 100%;
+}
+.menu-list > ul > li > a {
+    line-height: 60px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    font-size : 1.25rem;
+    color: #fff;
+    text-decoration: none;
+}
+.menu-list > ul > li > a:hover {
+    background-color: #bd2d30;
+}
+/* contact-social  */
+.contact { 
+    display: flex;
+    justify-content: space-between;
+
+}
+.contact > span > i {
+    width: fit-content;
+    padding: 0 10px;
+    color : #fff;
+    font-weight: 900;
+    font-size : 35px;
+    line-height: 60px;
+    cursor: pointer;
+}
+.btn-menu {
+    display: none;
+    width: auto;
+}
+
+.btn-menu > i {
+    font-size: 38px;
+    color: #fff;
+    line-height: 50px;
+    width: fit-content;
+    padding: 10px;
+}
+
+/* responsive */
+@media (max-width: 576px) {
+    .logo > h2{
+        font-size : 2.5rem;
+    }
+ }
+
+@media (max-width: 768px) { 
+    .nav-bar {
+            padding: 0;
+    }
+    .menu-list {
+        display : none;
+    }
+    .btn-menu {
+        display: block;
+    }
+    .row { 
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+        margin: 0;
+    }
+    .logo {
+        width: 100px;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .logo > h2{
+        font-size : 1.5rem;
+    }
+    .contact {
+        display: none;
+    }
+    .contact > span > i {
+        font-size: 15px;
+    }
+}
+@media (max-width: 992px) { 
+    .menu-list > ul > li > a{
+        font-size : 1rem;
+    }
+    .logo > h2{
+        font-size : 1.0rem;
+    }
+    .contact > span > i {
+        font-size: 20px;
+    }
+ }
+
+@media (min-width: 1200px) { 
+
+}
