@@ -10,80 +10,95 @@ import imgSkill6 from '../../assets/images/Camera.png';
 import FeatureServices from './FeatureServices';
 import ServiceSkills from './ServiceSkills';
 
-
 function Services() {
-    const dataFeature = [
-        {
-            title: "Web Development",
-            desc: "Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. -Iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit.",
-            img: imgFeature1,
-            imgRight: true
-        },
-        {
-            title: "Identity Branding",
-            desc: "Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. -Iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit.",
-            img: imgFeature2,
-            imgRight: false
-        }
-    ]
-    const dataSkills = [
-        {
-            heading: "Branding & Identity",
-            desc: "Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.",
-            img: imgSkill1
-        },
-        {
-            heading: "Web & Graphic Design ",
-            desc: "Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.",
-            img: imgSkill2
-        },
-        {
-            heading: "Mobile App Development",
-            desc: "Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.",
-            img: imgSkill3
-        },
-        {
-            heading: "Animations",
-            desc: "Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.",
-            img: imgSkill4
-        },
-        {
-            heading: "UI/UX",
-            desc: "Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.",
-            img: imgSkill5
-        },
-        {
-            heading: "Photography",
-            desc: "Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.",
-            img: imgSkill6
-        }
-    ]
+  const dataFeature = [
+    {
+      title: 'Web Development',
+      desc:
+        'Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. -Iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit.',
+      img: imgFeature1,
+      imgRight: true,
+    },
+    {
+      title: 'Identity Branding',
+      desc:
+        'Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. -Iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit.',
+      img: imgFeature2,
+      imgRight: false,
+    },
+  ];
+  const dataSkills = [
+    {
+      heading: 'Branding & Identity',
+      desc:
+        'Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.',
+      img: imgSkill1,
+    },
+    {
+      heading: 'Web & Graphic Design ',
+      desc:
+        'Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.',
+      img: imgSkill2,
+    },
+    {
+      heading: 'Mobile App Development',
+      desc:
+        'Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.',
+      img: imgSkill3,
+    },
+    {
+      heading: 'Animations',
+      desc:
+        'Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.',
+      img: imgSkill4,
+    },
+    {
+      heading: 'UI/UX',
+      desc:
+        'Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.',
+      img: imgSkill5,
+    },
+    {
+      heading: 'Photography',
+      desc:
+        'Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.',
+      img: imgSkill6,
+    },
+  ];
 
-    const [feature] = useState(dataFeature);
-    const [skills] = useState(dataSkills);
+  const [feature] = useState(dataFeature);
+  const [skills] = useState(dataSkills);
 
-    const listFeature = feature.map((item) => 
-        {
-            const {title, desc, img, imgRight} = item;
-            return <FeatureServices key={item.title} title={title} desc={desc} img={img} imgRight={imgRight} />
-        }
-    )
-    const listSkills = skills.map((item) => 
-        {
-            const {heading, desc, img} = item;
-            return <ServiceSkills key={item.heading} heading={heading} desc={desc} img={img} />
-        }
-    )
+  const listFeature = feature.map(item => {
+    const { title, desc, img, imgRight } = item;
+    return (
+      <FeatureServices
+        key={item.title}
+        title={title}
+        desc={desc}
+        img={img}
+        imgRight={imgRight}
+      />
+    );
+  });
+  const listSkills = skills.map(item => {
+    const { heading, desc, img } = item;
+    return (
+      <ServiceSkills
+        key={item.heading}
+        heading={heading}
+        desc={desc}
+        img={img}
+      />
+    );
+  });
 
-    return <div className="services">
-        <div className="services-feature">
-            {listFeature}
-        </div>
-        <div className="services-skills container">
-            {listSkills}
-        </div>
-    </div>;
+  return (
+    <div className="services">
+      <div className="services-feature">{listFeature}</div>
+      <div className="services-skills container">{listSkills}</div>
+    </div>
+  );
 }
-
 
 export default Services;
