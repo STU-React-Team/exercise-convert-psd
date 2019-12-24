@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMobileAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-function Footer() {
+const Footer = () => {
   const [state, setState] = useState({});
 
   const handleInputChange = e => {
@@ -100,6 +100,6 @@ function Footer() {
       </div>
     </div>
   );
-}
+};
 
 export default Footer;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function FeatureServices(props) {
+const FeatureServices = props => {
   const { title, desc, img, imgRight } = props;
   const titleArr = title.split(' ');
   const descArr = desc.split('-');
@@ -33,7 +33,7 @@ function FeatureServices(props) {
       </div>
     </div>
   );
-}
+};
 
 FeatureServices.propTypes = {
   title: PropTypes.string.isRequired,

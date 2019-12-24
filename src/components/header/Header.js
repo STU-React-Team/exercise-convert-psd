@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import logo from '../../assets/images/paper-plane.png';
+import logo from 'assets/images/paper-plane.png';
 
-function Header() {
+const Header = () => {
   const [toggleNav, setToggleNav] = useState(0);
 
   return (
@@ -40,6 +40,6 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
 export default Header;

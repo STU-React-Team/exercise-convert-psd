@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import imgFeature1 from '../../assets/images/FlowTree-Icon.png';
-import imgFeature2 from '../../assets/images/Users-Icon.png';
-import imgSkill1 from '../../assets/images/Person-Icon.png';
-import imgSkill2 from '../../assets/images/Browser-Icon.png';
-import imgSkill3 from '../../assets/images/iPad-Icon.png';
-import imgSkill4 from '../../assets/images/Video-Icon.png';
-import imgSkill5 from '../../assets/images/Star-Icon.png';
-import imgSkill6 from '../../assets/images/Camera.png';
-import FeatureServices from './FeatureServices';
-import ServiceSkills from './ServiceSkills';
+import imgFeature1 from 'assets/images/FlowTree-Icon.png';
+import imgFeature2 from 'assets/images/Users-Icon.png';
+import imgSkill1 from 'assets/images/Person-Icon.png';
+import imgSkill2 from 'assets/images/Browser-Icon.png';
+import imgSkill3 from 'assets/images/iPad-Icon.png';
+import imgSkill4 from 'assets/images/Video-Icon.png';
+import imgSkill5 from 'assets/images/Star-Icon.png';
+import imgSkill6 from 'assets/images/Camera.png';
+import FeatureServices from 'components/services/FeatureServices';
+import ServiceSkills from 'components/services/ServiceSkills';
 
-function Services() {
+const Services = () => {
   const dataFeature = [
     {
       title: 'Web Development',
@@ -99,6 +99,6 @@ function Services() {
       <div className="services-skills container">{listSkills}</div>
     </div>
   );
-}
+};
 
 export default Services;

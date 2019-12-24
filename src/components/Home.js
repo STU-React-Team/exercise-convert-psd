@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from './header/Header';
+import Header from 'components/header/Header';
 import './Home.scss';
-import Services from './services';
-import Clients from './clients';
-import Logo from './logo';
-import Team from './team';
-import Footer from './footer/Footer';
+import Services from 'components/services';
+import Clients from 'components/clients';
+import Logo from 'components/logo';
+import Team from 'components/team';
+import Footer from 'components/footer/Footer';
 
-function Home() {
+const Home = () => {
   return (
     <>
       <Header />
@@ -18,6 +18,6 @@ function Home() {
       <Footer />
     </>
   );
-}
+};
 
 export default Home;
