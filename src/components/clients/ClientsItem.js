@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ClientsItem = (props) => {
+const ClientsItem = props => {
   const { name, desc, img, textRight } = props;
   return (
     <div className="clients__item">
@@ -17,7 +17,7 @@ const ClientsItem = (props) => {
       </div>
     </div>
   );
-}
+};
 
 ClientsItem.propTypes = {
   name: PropTypes.string.isRequired,

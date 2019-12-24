@@ -31,6 +31,6 @@ const Logo = () => {
     <LogoItem key={item.name} name={item.name} img={item.img} />
   ));
   return <div className="logo container">{listLogo}</div>;
-}
+};
 
 export default Logo;

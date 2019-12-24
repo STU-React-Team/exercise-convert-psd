@@ -13,7 +13,7 @@ const ServiceSkills = ({ img, heading, desc }) => {
       </div>
     </div>
   );
-}
+};
 
 ServiceSkills.propTypes = {
   img: PropTypes.string.isRequired,

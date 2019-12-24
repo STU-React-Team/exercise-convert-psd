@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 
-const TeamItem = (props) => {
+const TeamItem = props => {
   const { name, pos, tw, fb, google, pinterest } = props;
   return (
     <div className="team__item">
@@ -37,7 +37,7 @@ const TeamItem = (props) => {
       </div>
     </div>
   );
-}
+};
 
 TeamItem.propTypes = {
   name: PropTypes.string.isRequired,

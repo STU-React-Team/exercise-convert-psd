@@ -99,6 +99,6 @@ const Services = () => {
       <div className="services-skills container">{listSkills}</div>
     </div>
   );
-}
+};
 
 export default Services;
