@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import imgclient from 'assets/images/Untitled_optimized.jpg';
 import imgclient1 from 'assets/images/Untitled1_optimized.jpg';
 import ClientsItem from 'components/clients/ClientsItem';
+import Title from 'components/common/Title';
 
 const Clients = () => {
   const dataClient = [
@@ -20,13 +21,15 @@ const Clients = () => {
       textRight: false,
     },
   ];
+  const titleClient = {
+    title: 'Awesome Clients',
+    desc: 'See watch nice things our clients said about us.',
+  };
 
-  const [clients] = useState(dataClient);
-  const listClient = clients.map(item => {
-    const { name, desc, img, textRight } = item;
+  const listClient = dataClient.map(({ name, desc, img, textRight }) => {
     return (
       <ClientsItem
-        key={item.name}
+        key={name}
         name={name}
         desc={desc}
         img={img}
@@ -37,16 +40,11 @@ const Clients = () => {
   return (
     <div className="clients">
       <div className="container">
-        <div className="title">
-          <span> Awesome </span>
-          <span> Clients </span>
-          <p>See watch nice things our clients said about us.</p>
-        </div>
-
+        <Title title={titleClient.title} desc={titleClient.desc} />
         <div className="clients__content">{listClient}</div>
       </div>
     </div>
   );
-}
+};
 
 export default Clients;

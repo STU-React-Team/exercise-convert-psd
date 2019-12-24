@@ -13,7 +13,7 @@ const ServiceSkills = ({ img, heading, desc }) => {
       </div>
     </div>
   );
-}
+};
 
 ServiceSkills.propTypes = {
   img: PropTypes.string.isRequired,
@@ -21,4 +21,4 @@ ServiceSkills.propTypes = {
   desc: PropTypes.string.isRequired,
 };
 
-export default ServiceSkills;
+export default React.memo(ServiceSkills);

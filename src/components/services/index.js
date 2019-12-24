@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import imgFeature1 from 'assets/images/FlowTree-Icon.png';
 import imgFeature2 from 'assets/images/Users-Icon.png';
 import imgSkill1 from 'assets/images/Person-Icon.png';
@@ -66,10 +66,7 @@ const Services = () => {
     },
   ];
 
-  const [feature] = useState(dataFeature);
-  const [skills] = useState(dataSkills);
-
-  const listFeature = feature.map(item => {
+  const listFeature = dataFeature.map(item => {
     const { title, desc, img, imgRight } = item;
     return (
       <FeatureServices
@@ -81,15 +78,9 @@ const Services = () => {
       />
     );
   });
-  const listSkills = skills.map(item => {
-    const { heading, desc, img } = item;
+  const listSkills = dataSkills.map(({ heading, desc, img }) => {
     return (
-      <ServiceSkills
-        key={item.heading}
-        heading={heading}
-        desc={desc}
-        img={img}
-      />
+      <ServiceSkills key={heading} heading={heading} desc={desc} img={img} />
     );
   });
 
@@ -99,6 +90,6 @@ const Services = () => {
       <div className="services-skills container">{listSkills}</div>
     </div>
   );
-}
+};
 
 export default Services;

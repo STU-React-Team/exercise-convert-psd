@@ -6,6 +6,8 @@ import logo from 'assets/images/paper-plane.png';
 const Header = () => {
   const [toggleNav, setToggleNav] = useState(0);
 
+  const handleToogleNav = () => setToggleNav(toggleNav + 1);
+
   return (
     <header className="header">
       <div className="header-menu container">
@@ -15,7 +17,7 @@ const Header = () => {
         <button
           type="button"
           className="header-mobile"
-          onClick={() => setToggleNav(toggleNav + 1)}>
+          onClick={handleToogleNav}>
           <FontAwesomeIcon icon={faBars} size="2x" />
         </button>
         <nav className={toggleNav % 2 ? 'active' : ''}>
@@ -33,13 +35,12 @@ const Header = () => {
           <h6> Can you build the website of my dream? </h6>
           <h4> YUP, WE CAN DO THAT. </h4>
           <button type="button" className="btn btn--header">
-            {' '}
-            Learn More{' '}
+            Learn More
           </button>
         </div>
       </div>
     </header>
   );
-}
+};
 
 export default Header;
