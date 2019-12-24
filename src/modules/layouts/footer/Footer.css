@@ -1,101 +1,99 @@
 .footer {
-    background-color: #f7f7f7;
+  background-color: #f7f7f7;
 }
 .footer > .container {
-    padding: 20px 0;
+  padding: 20px 0;
 }
-.f-form-title{
-    border-bottom: 1px solid #333;
-    font-weight: 600;
-    text-align: left;
+.f-form-title {
+  border-bottom: 1px solid #333;
+  font-weight: 600;
+  text-align: left;
 }
 /* Footer From  */
 .f-form-group {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 .f-form-input {
-    height: 182px;
-    display : flex;
-    flex-direction: column;
-    justify-content: space-between;
+  height: 182px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-
-
 .f-btn-send {
-    width: 100%;
-    margin-top: 10px;
-    height: 40px;
-    color : #fff;
-    text-align: center;
-    font-weight: 700;
-    font-size: 30px;
-    background-color: #d34346;
-    border-radius: 5px;
-    border: none;
-    outline: none;
+  width: 100%;
+  margin-top: 10px;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  background-color: #d34346;
+  border-radius: 5px;
+  border: none;
+  outline: none;
 }
 /* Footer Address  */
 .f-address-list {
-    list-style: none;
-    padding-top: 20px;
+  list-style: none;
+  padding-top: 20px;
 }
 .f-address-list > li {
-    text-align: left;
+  text-align: left;
 }
 .f-address-list > li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .f-address-list > li > p {
-    margin:0;
+  margin: 0;
 }
 .f-address-list > li > p > i {
-    width: fit-content;
-    font-size: 20px;
-    margin-right: 10px;
+  width: fit-content;
+  font-size: 20px;
+  margin-right: 10px;
 }
 .social-list > span {
-    width: fit-content;
-    font-size : 40px;
-    margin-right: 20px;
+  width: fit-content;
+  font-size: 40px;
+  margin-right: 20px;
 }
-.fa-facebook-square, .fa-twitter-square {
-    color: royalblue;
+.fa-facebook-square,
+.fa-twitter-square {
+  color: royalblue;
 }
 .fa-envelope-square {
-    color: tomato;
+  color: tomato;
 }
 /* CopyRight  */
 .copyright {
-    height: 60px;
-    background-color: #314559;
+  height: 60px;
+  background-color: #314559;
 }
-.copyright > div >h2 {
-    line-height: 60px;
-    text-align: left;
-    font-size: 20px;
-    margin: 0;
-    color: #fff;
-}
-
-
-@media only screen and (max-width: 992px){
-    .f-address {
-        margin-top: 30px;
-    }
-    .f-form-cmt {
-        margin-top: 30px;
-    }
+.copyright > div > h2 {
+  line-height: 60px;
+  text-align: left;
+  font-size: 20px;
+  margin: 0;
+  color: #fff;
 }
 
-@media only screen and (max-width: 768px){
-
+@media only screen and (max-width: 992px) {
+  .f-address {
+    margin-top: 30px;
+  }
+  .f-form-cmt {
+    margin-top: 30px;
+  }
 }
-@media only screen and (max-width: 576px){
-    .copyright > div >h2 {
-        padding-left: 15px;
-    }
-    .heading {
-        font-size : 30px;
-    }
+
+@media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 576px) {
+  .copyright > div > h2 {
+    padding-left: 15px;
+  }
+  .heading {
+    font-size: 26px;
+    padding-left: 5px;
+  }
 }
