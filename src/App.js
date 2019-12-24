@@ -6,6 +6,7 @@ import Home from './components/Home';
 library.add(fab);
 
 function App() {
+
   return (
     <>
       <Home />
