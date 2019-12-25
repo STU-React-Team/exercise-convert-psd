@@ -45,3 +45,45 @@ header {
 .btn-more:hover {
   color: #fff;
 }
+.service {
+  padding: 50px 0;
+}
+.service-background {
+  background: #fafafa;
+}
+.skill-img {
+  background: #000;
+  border-radius: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 70px;
+  width: 70px;
+}
+.client-box {
+  margin: 20px 0;
+}
+.chat {
+  padding: 30px 50px;
+  background: #fff;
+  margin: 20px;
+}
+.teams {
+  margin: 30px 0;
+}
+.team-section-title {
+  margin: 30px 0;
+}
+.team-section {
+  background: #000;
+  color: #fff;
+}
+.partner-img {
+  height: 250px;
+  width: 250px;
+  border: 7px solid #fff;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+.social-icon i {
+  margin: 10px;
+}
