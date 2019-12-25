@@ -38,6 +38,7 @@ const ServiceTab = () => {
           </a>
         </li>
       </ul>
+
       <div className="service-tab-content tab-content">
         <div
           className="tab-pane fade show active"
@@ -51,6 +52,7 @@ const ServiceTab = () => {
           leg allows the birds to conserve more body heat, given that they spend
           a significant amount of time wading in cold water.
         </div>
+        
         <div
           className="tab-pane fade"
           id="cuckoo"
@@ -62,6 +64,7 @@ const ServiceTab = () => {
           <br /> The family has a cosmopolitan distribution, with the majority
           of species being tropical.
         </div>
+
         <div
           className="tab-pane fade"
           id="ostrich"
@@ -75,5 +78,6 @@ const ServiceTab = () => {
       </div>
     </div>
   );
-}
+};
+
 export default ServiceTab;

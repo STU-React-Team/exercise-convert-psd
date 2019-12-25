@@ -11,7 +11,7 @@
   height: 70px;
   background-color: #d34346;
   border-bottom: 8px solid #bd2d30;
-  padding: 0 1rem;
+  padding: 0 1rem !important;
 }
 /* logo */
 .logo {
@@ -72,7 +72,7 @@
 .btn-menu > button {
   font-size: 38px;
   color: #fff;
-  line-height: 30px !important;
+  line-height: 30px;
   width: fit-content;
   padding: 10px;
   border: none;
@@ -119,26 +119,38 @@
   }
 }
 @media (max-width: 2000px) {
-  .btn-menu { display : none}
+  .btn-menu {
+    display: none;
+  }
 }
 
 @media (max-width: 992px) {
   .menu-list > ul > li > a {
     font-size: 1rem;
+    padding: 0;
+  }
+  .menu-list > ul > li {
+    height: 100%;
+  }
+  .logo {
+    width: fit-content !important;
   }
   .logo > h2 {
-    font-size: 1rem;
+    font-size: 22px;
   }
   .contact > span > i {
-    font-size: 20px;
+    font-size: 27px;
   }
+  .btn-menu > button {
+    line-height: 45px;
+  }
+  
 }
-@media (max-width: 768px){
-  .menu-list { 
+@media (max-width: 768px) {
+  .menu-list {
     display: block;
   }
   .btn-menu {
     display: block;
   }
-} 
-
+}

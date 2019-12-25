@@ -10,5 +10,6 @@ const About = () => {
       <AboutTeam />
     </div>
   );
-}
+};
+
 export default About;

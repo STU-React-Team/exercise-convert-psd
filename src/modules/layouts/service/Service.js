@@ -48,6 +48,7 @@ const Service = () => {
       content: 'Curabitur at rhoncus quam. In in tortor quis sem tempor',
     },
   ];
+
   const renderServicePart = partsService.map(part => {
     return (
       <ServicePart
@@ -59,11 +60,12 @@ const Service = () => {
       />
     );
   });
+  
   return (
     <div className="service container-fluid">
       <div className="container">
         <div className="row">
-          <h1 className="service-head heading w-100">
+          <h1 className="service-head head-blue heading w-100">
             SERVICE
             <i className="fas fa-arrow-up" />
           </h1>
@@ -76,5 +78,5 @@ const Service = () => {
       </div>
     </div>
   );
-}
-export default Service ;
+};
+export default Service;

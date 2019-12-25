@@ -41,18 +41,20 @@ const BannerSlider = () => {
         className="carousel-control-prev"
         href="#carouselExampleControls"
         role="button"
-        data-slide="prev">
-        <span className="carousel-control-prev-icon" aria-hidden="true" />
+        data-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true" />
       </a>
       <a
         className="carousel-control-next"
         href="#carouselExampleControls"
         role="button"
-        data-slide="next">
-        <span className="carousel-control-next-icon" aria-hidden="true" />
+        data-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true" />
       </a>
     </div>
   );
-}
+};
 
 export default BannerSlider;

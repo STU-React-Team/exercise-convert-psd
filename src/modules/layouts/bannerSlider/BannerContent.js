@@ -10,7 +10,8 @@ const BannerDetail = React.memo(({ title, content }) => {
       </div>
     </div>
   );
-})
+});
+
 BannerDetail.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,

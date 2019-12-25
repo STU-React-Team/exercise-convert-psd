@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className="contact-map container-fluid">
       <div className="container">
-        <h1 className="contact-head heading w-100">
+        <h1 className="contact-head head-blue heading w-100">
           CONTACT
           <i className="fas fa-arrow-up" />
         </h1>
@@ -13,5 +13,6 @@ const Contact = () => {
       </div>
     </div>
   );
-}
+};
+
 export default Contact;

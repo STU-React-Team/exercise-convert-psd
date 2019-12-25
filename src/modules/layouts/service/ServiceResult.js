@@ -1,4 +1,5 @@
 import React from 'react';
+
 const ServiceResult = () => {
   return (
     <div className="service-result col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
@@ -23,5 +24,6 @@ const ServiceResult = () => {
       </div>
     </div>
   );
-}
+};
+
 export default ServiceResult;

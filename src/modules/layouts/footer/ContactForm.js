@@ -4,6 +4,7 @@ const ContactForm = () => {
   return (
     <div className="f-form-info col-xl-8 col-lg-8 col-md-12">
       <h2 className="f-form-title">Contact Form</h2>
+      
       <div className="f-form-group row">
         <div className="f-form-input col-xl-4 col-md-12">
           <input
@@ -28,6 +29,7 @@ const ContactForm = () => {
             placeholder="PHONE"
           />
         </div>
+
         <div className="f-form-cmt col-xl-8 col-md-12">
           <textarea
             className="form-control"
@@ -46,5 +48,6 @@ const ContactForm = () => {
       </div>
     </div>
   );
-}
+};
+
 export default ContactForm;

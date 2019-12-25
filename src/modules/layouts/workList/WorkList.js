@@ -26,6 +26,7 @@ const WorkList = () => {
       content: 'Curabiture at rhoncus quam. In in tortor quis sem tempor ul',
     },
   ];
+
   const renderWorkList = listWork.map(work => (
     <Work
       key={work.icon}
@@ -42,5 +43,6 @@ const WorkList = () => {
       </div>
     </div>
   );
-}
+};
+
 export default WorkList;

@@ -14,9 +14,11 @@ const Work = React.memo(({ icon, title, content }) => {
     </div>
   );
 });
+
 Work.propTypes = {
   icon: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
 };
+
 export default Work;

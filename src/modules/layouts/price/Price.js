@@ -43,6 +43,7 @@ const Price = () => {
       footer: 'Buy NOW',
     },
   ];
+
   return (
     <div className="price container-fluid">
       <div className="container">
@@ -71,5 +72,6 @@ const Price = () => {
       </div>
     </div>
   );
-}
+};
+
 export default Price;

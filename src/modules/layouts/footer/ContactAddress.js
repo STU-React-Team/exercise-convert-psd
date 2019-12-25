@@ -38,5 +38,6 @@ const ContactAddress = () => {
       </ul>
     </div>
   );
-}
+};
+
 export default ContactAddress;

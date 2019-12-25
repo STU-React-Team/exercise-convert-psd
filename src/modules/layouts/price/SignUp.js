@@ -11,13 +11,24 @@ const SignUp = () => {
           massa
         </p>
       </div>
+
       <div className="sub col-12 col-sm-12 col-md-6 col-xl-6 col-lg-6">
-        <div className="btn-sub">
-          <h3 className="text-sub">SUBCRIPTION TO OURS</h3>
-          <h1 className="text-news">NEWSLETTER</h1>
-        </div>
+        <input
+          type="email"
+          className="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+        <button 
+          type="button"
+          className="btn-sub"
+          >
+            <h3 className="text-sub">SUBCRIPTION TO OURS</h3>
+            <h1 className="text-news">NEWSLETTER</h1>
+        </button>
       </div>
     </div>
   );
-}
+};
+
 export default SignUp;

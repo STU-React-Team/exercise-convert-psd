@@ -8,5 +8,6 @@ const CopyRight = () => {
       </div>
     </div>
   );
-}
+};
+
 export default CopyRight;

@@ -16,10 +16,12 @@ const ServicePart = React.memo(({ icon, title, content, href }) => {
     </div>
   );
 });
+
 ServicePart.propTypes = {
   icon: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
 };
+
 export default ServicePart;

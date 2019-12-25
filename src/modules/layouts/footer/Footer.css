@@ -76,6 +76,9 @@
   margin: 0;
   color: #fff;
 }
+.head-blue > i{
+  background-color: #22303e !important;
+}
 
 @media only screen and (max-width: 992px) {
   .f-address {
@@ -87,6 +90,15 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .container-fluid {
+    padding: 0 0 60px 0 !important;
+  }
+  .row {
+    margin: 0 !important
+  }
+  .container {
+    padding: 0 !important;
+  }
 }
 @media only screen and (max-width: 576px) {
   .copyright > div > h2 {
@@ -95,5 +107,14 @@
   .heading {
     font-size: 26px;
     padding-left: 5px;
+  }
+  .heading > i {
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+  }
+  .fa-arrow-up:before {
+    top: 7px !important;
+    left: 9px !important;
   }
 }
