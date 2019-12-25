@@ -14,4 +14,4 @@ LogoItem.propTypes = {
   img: PropTypes.string.isRequired,
 };
 
-export default LogoItem;
+export default React.memo(LogoItem);

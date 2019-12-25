@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Envota from 'assets/images/Envato.png';
 import WordPress from 'assets/images/WordPress.png';
 import Tuts from 'assets/images/Tuts+.png';
@@ -25,10 +25,8 @@ const Logo = () => {
     },
   ];
 
-  const [logo] = useState(dataLogo);
-
-  const listLogo = logo.map(item => (
-    <LogoItem key={item.name} name={item.name} img={item.img} />
+  const listLogo = dataLogo.map(({ name, img }) => (
+    <LogoItem key={name} name={name} img={img} />
   ));
   return <div className="logo container">{listLogo}</div>;
 };

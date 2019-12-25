@@ -1,10 +1,8 @@
 import React from 'react';
+import Title from 'components/common/Title';
 import PropTypes from 'prop-types';
 
-const FeatureServices = props => {
-  const { title, desc, img, imgRight } = props;
-  const titleArr = title.split(' ');
-  const descArr = desc.split('-');
+const FeatureServices = ({ title, desc, img, imgRight }) => {
   return (
     <div className={!imgRight ? 'services-feature__bg' : ''}>
       <div className="container services-feature__item">
@@ -17,18 +15,7 @@ const FeatureServices = props => {
           <img src={img} alt={title} />
         </div>
         <div className="services-feature__text">
-          <div className="title">
-            <span> {titleArr[0]} </span>
-            <span> {titleArr[1]} </span>
-          </div>
-          <p className="services__desc services-feature__desc">
-            {' '}
-            {descArr[0]}{' '}
-          </p>
-          <p className="services__desc services-feature__desc">
-            {' '}
-            {descArr[1]}{' '}
-          </p>
+          <Title title={title} desc={desc} />
         </div>
       </div>
     </div>
@@ -42,4 +29,4 @@ FeatureServices.propTypes = {
   imgRight: PropTypes.bool.isRequired,
 };
 
-export default FeatureServices;
+export default React.memo(FeatureServices);

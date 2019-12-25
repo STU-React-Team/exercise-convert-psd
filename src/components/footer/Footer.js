@@ -1,29 +1,26 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMobileAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import Title from 'components/common/Title';
 
 const Footer = () => {
-  const [state, setState] = useState({});
+  const titleFooter = {
+    title: 'Say Hello',
+    desc:
+      'Don’t be shy, drop us an email and say hello! We are a really nice bunch of people :)',
+  };
+  const [inputs, setInputs] = useState({});
 
   const handleInputChange = e => {
     const { value, name } = e.target;
-    const currentState = state;
-    const newState = Object.assign(currentState, { [name]: value });
-    setState(newState);
+    setInputs(Object.assign(inputs, { [name]: value }));
   };
   return (
     <div className="footer">
       <div className="container">
         <div className="footer__content">
           <div className="footer__item">
-            <div className="title">
-              <span> Say </span>
-              <span> Hello </span>
-              <p>
-                Don’t be shy, drop us an email and say hello! We are a really
-                nice bunch of people :&#41;
-              </p>
-            </div>
+            <Title title={titleFooter.title} desc={titleFooter.desc} />
             <div className="footer-info">
               <div className="footer-info__social">
                 <div>
@@ -70,7 +67,7 @@ const Footer = () => {
                   type="text"
                   placeholder="Your Name *"
                   name="name"
-                  value={state.name}
+                  value={inputs.name}
                 />
               </div>
               <div>
@@ -78,7 +75,7 @@ const Footer = () => {
                   type="email"
                   placeholder="Your E-mail *"
                   name="email"
-                  value={state.email}
+                  value={inputs.email}
                   onChange={handleInputChange}
                 />
               </div>
@@ -87,7 +84,7 @@ const Footer = () => {
                   placeholder="Your Message *"
                   rows="8"
                   name="message"
-                  value={state.message}
+                  value={inputs.message}
                   onChange={handleInputChange}
                 />
               </div>

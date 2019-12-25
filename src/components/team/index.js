@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import TeamItem from 'components/team/TeamItem';
+import Title from 'components/common/Title';
 
 const Team = () => {
   const dataTeam = [
@@ -46,11 +47,14 @@ const Team = () => {
       pinterest: 'https://www.pinterest.com/',
     },
   ];
+  const titleTeam = {
+    title: 'Awesome Team',
+    desc: 'These wonderful people make work enjoyable.',
+  };
 
-  const [team] = useState(dataTeam);
   const [translateX, setTranslateX] = useState(0);
 
-  const handleSlider = num => {
+  const setStyleSliderTeam = num => {
     if (num < 0) {
       if (translateX === -33.3334 * 3) {
         setTranslateX(0);
@@ -64,13 +68,12 @@ const Team = () => {
     }
   };
 
-  const styleSlider = { transform: `${`translate(${translateX}%)`}` };
+  const styleSliderTeam = { transform: `${`translate(${translateX}%)`}` };
 
-  const listTeam = team.map(item => {
-    const { name, pos, fb, google, pinterest, tw } = item;
+  const listTeam = dataTeam.map(({ name, pos, fb, google, pinterest, tw }) => {
     return (
       <TeamItem
-        key={item.name}
+        key={name}
         name={name}
         pos={pos}
         fb={fb}
@@ -84,29 +87,25 @@ const Team = () => {
   return (
     <div className="team">
       <div className="container">
-        <div className="title">
-          <span> Awesome </span>
-          <span> Team </span>
-          <p>These wonderful people make work enjoyable.</p>
-        </div>
+        <Title title={titleTeam.title} desc={titleTeam.desc} />
         <div className="team__slider">
-          <div className="team__content" style={styleSlider}>
+          <div className="team__content" style={styleSliderTeam}>
             {listTeam}
           </div>
           <button
             type="button"
             className="prev"
-            onClick={handleSlider.bind(this, 1)}>
+            onClick={setStyleSliderTeam.bind(this, 1)}>
             <FontAwesomeIcon icon={faArrowLeft} />
           </button>
           <button
             type="button"
             className="next"
-            onClick={handleSlider.bind(this, -1)}>
+            onClick={setStyleSliderTeam.bind(this, -1)}>
             <FontAwesomeIcon icon={faArrowRight} />
           </button>
         </div>
-        <p>
+        <p className="team__desc">
           Proin iaculis purus consequat sem cure digni ssim donec porttitora
           entum suscipit aenean rhoncus posuere odio in tincidunt proin iaculis.
         </p>

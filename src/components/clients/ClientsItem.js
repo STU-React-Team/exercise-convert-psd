@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ClientsItem = props => {
-  const { name, desc, img, textRight } = props;
+const ClientsItem = ({ name, desc, img, textRight }) => {
   return (
     <div className="clients__item">
       <div
@@ -26,4 +25,4 @@ ClientsItem.propTypes = {
   textRight: PropTypes.bool.isRequired,
 };
 
-export default ClientsItem;
+export default React.memo(ClientsItem);

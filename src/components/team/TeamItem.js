@@ -2,8 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 
-const TeamItem = props => {
-  const { name, pos, tw, fb, google, pinterest } = props;
+const TeamItem = ({ name, pos, tw, fb, google, pinterest }) => {
   return (
     <div className="team__item">
       <div className="team__img" />
@@ -12,26 +11,22 @@ const TeamItem = props => {
       <div className="team__info">
         {tw ? (
           <button type="button">
-            {' '}
-            <FontAwesomeIcon icon={['fab', 'twitter']} />{' '}
+            <FontAwesomeIcon icon={['fab', 'twitter']} />
           </button>
         ) : null}
         {fb ? (
           <button type="button">
-            {' '}
-            <FontAwesomeIcon icon={['fab', 'facebook-f']} />{' '}
+            <FontAwesomeIcon icon={['fab', 'facebook-f']} />
           </button>
         ) : null}
         {google ? (
           <button type="button">
-            {' '}
-            <FontAwesomeIcon icon={['fab', 'google-plus-g']} />{' '}
+            <FontAwesomeIcon icon={['fab', 'google-plus-g']} />
           </button>
         ) : null}
         {pinterest ? (
           <button type="button">
-            {' '}
-            <FontAwesomeIcon icon={['fab', 'pinterest-p']} />{' '}
+            <FontAwesomeIcon icon={['fab', 'pinterest-p']} />
           </button>
         ) : null}
       </div>
@@ -56,4 +51,4 @@ TeamItem.defaultProps = {
   pinterest: '',
 };
 
-export default TeamItem;
+export default React.memo(TeamItem);

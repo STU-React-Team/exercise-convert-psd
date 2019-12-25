@@ -21,4 +21,4 @@ ServiceSkills.propTypes = {
   desc: PropTypes.string.isRequired,
 };
 
-export default ServiceSkills;
+export default React.memo(ServiceSkills);
