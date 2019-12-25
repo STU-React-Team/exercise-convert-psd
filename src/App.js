@@ -6,6 +6,7 @@ import Home from 'components/Home';
 library.add(fab);
 
 const App = () => {
+
   return (
     <>
       <Home />
