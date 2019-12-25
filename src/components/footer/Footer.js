@@ -9,7 +9,7 @@ const Footer = () => {
     desc:
       'Don’t be shy, drop us an email and say hello! We are a really nice bunch of people :)',
   };
-  const [inputs, setInputs] = useState({});
+  const [inputs, setInputs] = useState({name:"", email:"", message:""});
 
   const handleInputChange = e => {
     const { value, name } = e.target;
@@ -67,7 +67,8 @@ const Footer = () => {
                   type="text"
                   placeholder="Your Name *"
                   name="name"
-                  value={inputs.name}
+                  defaultValue={inputs.name}
+                  onChange={handleInputChange}
                 />
               </div>
               <div>
@@ -75,7 +76,7 @@ const Footer = () => {
                   type="email"
                   placeholder="Your E-mail *"
                   name="email"
-                  value={inputs.email}
+                  defaultValue={inputs.email}
                   onChange={handleInputChange}
                 />
               </div>
@@ -84,7 +85,7 @@ const Footer = () => {
                   placeholder="Your Message *"
                   rows="8"
                   name="message"
-                  value={inputs.message}
+                  defaultValue={inputs.message}
                   onChange={handleInputChange}
                 />
               </div>
