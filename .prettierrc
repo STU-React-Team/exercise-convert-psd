@@ -8,5 +8,7 @@
   "bracketSpacing": true,
   "jsxBracketSameLine": true,
   "arrowParens": "avoid",
-  "htmlWhitespaceSensitivity": "strict"
+  "htmlWhitespaceSensitivity": "strict",
+  "tabSize": 2,
+  "insertSpaces": true,
 }
