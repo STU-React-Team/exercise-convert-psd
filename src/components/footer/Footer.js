@@ -9,7 +9,7 @@ const Footer = () => {
     desc:
       'Don’t be shy, drop us an email and say hello! We are a really nice bunch of people :)',
   };
-  const [inputs, setInputs] = useState({name:"", email:"", message:""});
+  const [inputs, setInputs] = useState({ name: '', email: '', message: '' });
 
   const handleInputChange = e => {
     const { value, name } = e.target;
