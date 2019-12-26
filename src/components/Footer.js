@@ -1,28 +1,34 @@
 import React from 'react';
 
-function Footer() {
+const Footer = () => {
   const socials = [
     {
+      key: 1,
       icon: 'fa fa-mobile',
       text: '(416) 555-0000',
     },
     {
+      key: 2,
       icon: 'fa fa-envelope',
       text: 'hello@escape.com',
     },
     {
+      key: 3,
       icon: 'fa fa-twitter',
       text: '@escape',
     },
     {
+      key: 4,
       icon: 'fa fa-facebook',
       text: 'facebook.com/escape',
     },
     {
+      key: 5,
       icon: 'fa fa-google-plus',
       text: 'plus.com/escape',
     },
     {
+      key: 6,
       icon: 'fa fa-pinterest-p',
       text: 'pinterest.com/escape',
     },
@@ -46,7 +52,7 @@ function Footer() {
               <div className="contact-social row">
                 {socials.map(social => {
                   return (
-                    <div className="social col-md-6 my-20">
+                    <div key={socials.key} className="social col-md-6 my-20">
                       <i className={social.icon} />
                       <span>{social.text}</span>
                     </div>
@@ -81,6 +87,6 @@ function Footer() {
       </section>
     </footer>
   );
-}
+};
 
 export default Footer;

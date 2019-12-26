@@ -1,8 +1,29 @@
 import React from 'react';
-import logo from '../assets/images/paper-plane.png';
+import logo from 'assets/images/paper-plane.png';
 
-function Header() {
-  const navigators = ['Home', 'Services', 'Clients', 'Team', 'Contact'];
+const Header = () => {
+  const navigators = [
+    {
+      key: 1,
+      text: 'Home',
+    },
+    {
+      key: 2,
+      text: 'Services',
+    },
+    {
+      key: 3,
+      text: 'Clients',
+    },
+    {
+      key: 4,
+      text: 'Team',
+    },
+    {
+      key: 5,
+      text: 'Contact',
+    },
+  ];
   return (
     <header className="text-white">
       <section className="container">
@@ -15,9 +36,9 @@ function Header() {
             <ul className="list-inline">
               {navigators.map(navigator => {
                 return (
-                  <li className="list-inline-item">
+                  <li key={navigator.key} className="list-inline-item">
                     <a className="nav-link" href="http://localhost:3000">
-                      {navigator}
+                      {navigator.text}
                     </a>
                   </li>
                 );
@@ -40,6 +61,6 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
 export default Header;

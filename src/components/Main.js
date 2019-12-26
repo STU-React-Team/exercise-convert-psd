@@ -1,61 +1,87 @@
 import React from 'react';
-import FlowTreeIcon from '../assets/images/FlowTreeIcon.png';
-import UsersIcon from '../assets/images/UsersIcon.png';
-import PersonIcon from '../assets/images/PersonIcon.png';
-import iPadIcon from '../assets/images/iPadIcon.png';
-import BrowserIcon from '../assets/images/BrowserIcon.png';
-import VideoIcon from '../assets/images/VideoIcon.png';
-import StarIcon from '../assets/images/StarIcon.png';
-import CameraIcon from '../assets/images/Camera.png';
-import ContainerBG from '../assets/images/Container.png';
-import Envato from '../assets/images/Envato.png';
-import WordPress from '../assets/images/WordPress.png';
-import Tuts from '../assets/images/Tuts.png';
-import Microlancercopy from '../assets/images/Microlancercopy.png';
+import FlowTreeIcon from 'assets/images/FlowTreeIcon.png';
+import UsersIcon from 'assets/images/UsersIcon.png';
+import PersonIcon from 'assets/images/PersonIcon.png';
+import iPadIcon from 'assets/images/iPadIcon.png';
+import BrowserIcon from 'assets/images/BrowserIcon.png';
+import VideoIcon from 'assets/images/VideoIcon.png';
+import StarIcon from 'assets/images/StarIcon.png';
+import CameraIcon from 'assets/images/Camera.png';
+import ContainerBG from 'assets/images/Container.png';
+import Envato from 'assets/images/Envato.png';
+import WordPress from 'assets/images/WordPress.png';
+import Tuts from 'assets/images/Tuts.png';
+import Microlancercopy from 'assets/images/Microlancercopy.png';
 
 function Main() {
   const skills = [
     {
+      key: 1,
       icon: PersonIcon,
       title: 'Branding & Identity',
     },
     {
+      key: 2,
       icon: iPadIcon,
       title: 'Web & Graphic Design',
     },
     {
+      key: 3,
       icon: BrowserIcon,
       title: 'Web & Graphic Design',
     },
     {
+      key: 4,
       icon: VideoIcon,
       title: 'Animations',
     },
     {
+      key: 5,
       icon: StarIcon,
       title: 'UI/UX',
     },
     {
+      key: 6,
       icon: CameraIcon,
       title: 'Photography',
     },
   ];
-  const partners = [Envato, WordPress, Tuts, Microlancercopy];
+  const partners = [
+    {
+      key: 1,
+      icon: Envato,
+    },
+    {
+      key: 1,
+      icon: WordPress,
+    },
+    {
+      key: 1,
+      icon: Tuts,
+    },
+    {
+      key: 1,
+      icon: Microlancercopy,
+    },
+  ];
   const facebook = 'fa fa-facebook';
   const twitter = 'fa fa-twitter';
   const pinterest = 'fa fa-pinterest-p';
   const teams = [
     {
+      key: 1,
       name: 'Kimberly Thompson',
       type: 'Marketer',
       socials: [twitter, facebook, pinterest],
     },
     {
+      key: 2,
       name: 'Kimberly Thompson',
       type: 'Coder',
       socials: [twitter, facebook, pinterest],
     },
     {
+      key: 3,
       name: 'Kimberly Thompson',
       type: 'Graphic designer',
       socials: [facebook, pinterest],
@@ -134,7 +160,7 @@ function Main() {
           <div className="row">
             {skills.map(skill => {
               return (
-                <div className="d-flex col-md-6">
+                <div key={skill.key} className="d-flex col-md-6">
                   <div className="d-inline">
                     <div className="skill-img">
                       <img src={skill.icon} alt="Person Icon" />
@@ -202,9 +228,9 @@ function Main() {
           <div className="row">
             {partners.map(partner => {
               return (
-                <div className="col-md-3">
+                <div key={partner.key} className="col-md-3">
                   <div className="partner-logo">
-                    <img src={partner} alt="Partner logo" />
+                    <img src={partner.icon} alt="Partner logo" />
                   </div>
                 </div>
               );
@@ -227,7 +253,7 @@ function Main() {
             <div className="row">
               {teams.map(team => {
                 return (
-                  <div className="col-md-4">
+                  <div key={team.key} className="col-md-4">
                     <div className="partner-img" />
                     <p className="team-name">
                       <strong>{team.name}</strong>
