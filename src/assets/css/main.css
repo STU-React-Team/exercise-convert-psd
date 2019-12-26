@@ -1,47 +1,117 @@
 .py-10 {
-  padding: 10px 0;
+	padding: 10px 0;
 }
 .py-30 {
-  padding: 30px 0;
+	padding: 30px 0;
+}
+.my-20 {
+	margin: 20px 0;
 }
 
 header {
-  min-height: 600px;
-  background: url('../images/banner.png') no-repeat;
-  background-size: cover;
+	min-height: 600px;
+	background: url('../images/banner.png') no-repeat;
+	background-size: cover;
 }
 .text-white .nav-link {
-  color: #fff;
+	color: #fff;
 }
 .header .list-inline-item {
-  margin-right: 0;
+	margin-right: 0;
 }
 .logo-text {
-  font-size: 24px;
-  padding: 10px 5px;
+	font-size: 24px;
+	padding: 10px 5px;
 }
 .banner {
-  margin: 100px 0;
+	margin: 100px 0;
 }
 .banner-text {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+	display: flex;
+	justify-content: center;
+	width: 100%;
 }
 .banner h1 {
-  font-size: 52px;
+	font-size: 52px;
 }
 .btn-more,
 .btn-more:hover {
-  border-radius: 3px;
-  padding: 5px 30px;
-  outline: none;
-  margin: 50px 0;
-  background: transparent;
-  border: 1px solid #fff;
-  box-shadow: none;
+	border-radius: 3px;
+	padding: 5px 30px;
+	outline: none;
+	margin: 50px 0;
+	background: transparent;
+	border: 1px solid #fff;
+	box-shadow: none;
 }
 .btn-more,
 .btn-more:hover {
-  color: #fff;
+	color: #fff;
+}
+.service {
+	padding: 50px 0;
+}
+.service-background {
+	background: #fafafa;
+}
+.skill-img {
+	background: #000;
+	border-radius: 50%;
+	height: 70px;
+	min-width: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.skill-content {
+	padding: 0 20px;
+}
+.client-box {
+	margin: 20px 0;
+}
+.chat {
+	padding: 30px 50px;
+	background: #fff;
+	margin: 20px;
+}
+.chat-user {
+	color: #7690c5;
+}
+.teams {
+	margin: 30px 0;
+}
+.team-section-title {
+	margin: 30px 0;
+}
+.team-section {
+	background: #000;
+	color: #fff;
+}
+.partner-img {
+	height: 250px;
+	width: 250px;
+	border: 7px solid #fff;
+	border-radius: 50%;
+	margin: 20px auto;
+}
+.social-icon i {
+	margin: 10px;
+}
+footer {
+	background: #7690c5;
+}
+.contact-section {
+	padding: 50px 0;
+}
+.social i {
+	font-size: 28px;
+	width: 40px;
+}
+.copyright {
+	padding: 30px 0;
+	border-top: 1px solid #87a0d2;
+}
+.data-input {
+	border-radius: 0;
+	margin: 20px 0;
 }
