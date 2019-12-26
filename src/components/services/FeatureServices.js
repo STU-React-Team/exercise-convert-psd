@@ -2,7 +2,7 @@ import React from 'react';
 import Title from 'components/common/Title';
 import PropTypes from 'prop-types';
 
-const FeatureServices = ({ title, desc, img, imgRight }) => {
+const FeatureService = ({ title, desc, img, imgRight }) => {
   return (
     <div className={!imgRight ? 'services-feature__bg' : ''}>
       <div className="container services-feature__item">
@@ -22,11 +22,11 @@ const FeatureServices = ({ title, desc, img, imgRight }) => {
   );
 };
 
-FeatureServices.propTypes = {
+FeatureService.propTypes = {
   title: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
   imgRight: PropTypes.bool.isRequired,
 };
 
-export default React.memo(FeatureServices);
+export default React.memo(FeatureService);

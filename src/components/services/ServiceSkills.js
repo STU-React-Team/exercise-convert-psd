@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ServiceSkills = ({ img, heading, desc }) => {
+const ServiceSkill = ({ img, heading, desc }) => {
   return (
     <div className="services-skills__item">
       <div className="services-skills__img">
@@ -15,10 +15,10 @@ const ServiceSkills = ({ img, heading, desc }) => {
   );
 };
 
-ServiceSkills.propTypes = {
+ServiceSkill.propTypes = {
   img: PropTypes.string.isRequired,
   heading: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
 };
 
-export default React.memo(ServiceSkills);
+export default React.memo(ServiceSkill);

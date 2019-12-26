@@ -7,7 +7,7 @@ import imgSkill3 from 'assets/images/iPad-Icon.png';
 import imgSkill4 from 'assets/images/Video-Icon.png';
 import imgSkill5 from 'assets/images/Star-Icon.png';
 import imgSkill6 from 'assets/images/Camera.png';
-import FeatureServices from 'components/services/FeatureServices';
+import FeatureService from 'components/services/FeatureServices';
 import ServiceSkills from 'components/services/ServiceSkills';
 
 const Services = () => {
@@ -27,7 +27,7 @@ const Services = () => {
       imgRight: false,
     },
   ];
-  const dataSkills = [
+  const dataSkill = [
     {
       heading: 'Branding & Identity',
       desc:
@@ -69,7 +69,7 @@ const Services = () => {
   const listFeature = dataFeature.map(item => {
     const { title, desc, img, imgRight } = item;
     return (
-      <FeatureServices
+      <FeatureService
         key={item.title}
         title={title}
         desc={desc}
@@ -78,7 +78,7 @@ const Services = () => {
       />
     );
   });
-  const listSkills = dataSkills.map(({ heading, desc, img }) => {
+  const listSkill = dataSkill.map(({ heading, desc, img }) => {
     return (
       <ServiceSkills key={heading} heading={heading} desc={desc} img={img} />
     );
@@ -87,7 +87,7 @@ const Services = () => {
   return (
     <div className="services">
       <div className="services-feature">{listFeature}</div>
-      <div className="services-skills container">{listSkills}</div>
+      <div className="services-skills container">{listSkill}</div>
     </div>
   );
 };
