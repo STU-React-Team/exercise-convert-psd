@@ -9,26 +9,26 @@ const TeamItem = ({ name, pos, tw, fb, google, pinterest }) => {
       <h2 className="team__name"> {name} </h2>
       <p className="team__position"> {pos} </p>
       <div className="team__info">
-        {tw ? (
+        {tw && (
           <button type="button">
             <FontAwesomeIcon icon={['fab', 'twitter']} />
           </button>
-        ) : null}
-        {fb ? (
+        )}
+        {fb && (
           <button type="button">
             <FontAwesomeIcon icon={['fab', 'facebook-f']} />
           </button>
-        ) : null}
-        {google ? (
+        )}
+        {google && (
           <button type="button">
             <FontAwesomeIcon icon={['fab', 'google-plus-g']} />
           </button>
-        ) : null}
-        {pinterest ? (
+        )}
+        {pinterest && (
           <button type="button">
             <FontAwesomeIcon icon={['fab', 'pinterest-p']} />
           </button>
-        ) : null}
+        )}
       </div>
     </div>
   );
