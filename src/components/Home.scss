@@ -1,0 +1,639 @@
+$small-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 992px;
+$desktopLarge-width: 1200px;
+
+@mixin small {
+  @media (min-width: #{$small-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktopLarge {
+  @media (min-width: #{$desktopLarge-width}) {
+    @content;
+  }
+}
+
+html {
+  font-size: 10px;
+  @include small {
+    font-size: 12px;
+  }
+  @include tablet {
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 18px;
+  }
+  @include desktopLarge {
+    font-size: 25px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 2vw;
+  @include desktop {
+    padding: 0;
+    max-width: 940px;
+  }
+}
+
+.title {
+  span {
+    font-size: 3rem;
+    font-family: 'Brandon Grotesque Bold';
+    &:first-child {
+      font-family: 'Brandon Grotesque Light';
+    }
+    @include desktopLarge {
+      font-size: 60pt;
+    }
+  }
+  p {
+    font-size: 1.5rem;
+    margin-top: 0.6rem;
+    color: #777;
+    @include desktopLarge {
+      font-size: 18pt;
+    }
+  }
+}
+
+.header {
+  position: relative;
+
+  &-menu {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    @include tablet {
+      padding: 0;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: transparent;
+    }
+    @include desktop {
+      top: 20px;
+    }
+    @include desktopLarge {
+      top: 40px;
+    }
+
+    nav {
+      position: absolute;
+      background-color: blue;
+      top: 100%;
+      right: 0;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      display: none;
+      &.active {
+        display: block;
+      }
+      @include tablet {
+        width: auto;
+        margin-left: auto;
+        display: block;
+        position: static;
+        background-color: transparent;
+        ul {
+          display: flex;
+        }
+      }
+
+      li {
+        padding: 10px;
+        color: #fff;
+        border-top: 1px solid #fff;
+        cursor: pointer;
+        font-size: 1.5rem;
+        &:hover {
+          color: #232323;
+          background-color: #f8f5f4;
+        }
+        @include tablet {
+          border-top: none;
+          font-family: 'Brandon Grotesque Medium';
+          font-size: 18pt;
+        }
+      }
+    }
+  }
+
+  &-logo {
+    width: 200px;
+  }
+
+  &-mobile {
+    margin-left: auto;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &-banner {
+    width: 100%;
+    height: 70vw;
+    background-image: url(../assets/images/Image.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    @include desktopLarge {
+      height: 44.3vw;
+    }
+  }
+
+  &-cap {
+    position: absolute;
+    width: 90vw;
+    text-align: center;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    @include tablet {
+      top: 50%;
+    }
+
+    h6 {
+      font-size: 1.5rem;
+      font-family: 'Brandon Grotesque Light';
+      @include desktopLarge {
+        font-size: 32pt;
+      }
+    }
+
+    h4 {
+      font-size: 2.5rem;
+      margin: 1.6rem 0 2.8rem 0;
+      font-family: 'Brandon Grotesque Bold';
+      @include desktopLarge {
+        font-size: 60pt;
+      }
+    }
+
+    button {
+      font-family: 'Brandon Grotesque Bold', sans-serif;
+      font-size: 1.5rem;
+      background-color: transparent;
+      outline: none;
+      border: 1px solid #fff;
+      border-radius: 3px;
+      color: #fff;
+      padding: 1rem 3.2rem;
+      cursor: pointer;
+      @include desktopLarge {
+        font-size: 23pt;
+      }
+    }
+  }
+}
+
+.services {
+  margin-top: 4rem;
+
+  &__desc {
+    color: #777;
+    font-size: 1.5rem;
+    @include desktopLarge {
+      font-size: 18pt;
+    }
+  }
+
+  &-feature {
+    &__bg {
+      background-color: #fafafa;
+      padding: 4rem 0;
+      margin-top: 4rem;
+    }
+    &__item {
+      padding: 0 1.5rem;
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    &__img {
+      display: none;
+      @include tablet {
+        display: block;
+        flex-basis: 30%;
+        &--right {
+          order: 1;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__text {
+      @include tablet {
+        flex-basis: 65%;
+      }
+    }
+
+    &__desc {
+      margin-top: 1.75rem;
+    }
+  }
+
+  &-skills {
+    margin-top: 4rem;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      flex-basis: 100%;
+      display: flex;
+      margin-bottom: 1.8rem;
+      @include tablet {
+        flex-basis: 45%;
+        &:nth-child(odd) {
+          flex-basis: 45%;
+          margin-right: 10%;
+        }
+      }
+    }
+
+    &__text {
+      margin-left: auto;
+      flex-basis: 70%;
+      @include small {
+        flex-basis: 80%;
+      }
+      @include tablet {
+        flex-basis: 75%;
+      }
+    }
+
+    &__img {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background-color: #232323;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &__heading {
+      font-size: 2rem;
+      font-family: 'Brandon Grotesque Medium';
+      @include desktopLarge {
+        font-size: 22pt;
+      }
+    }
+
+    &__desc {
+      margin-top: 0.6rem;
+    }
+  }
+}
+
+.clients {
+  background-color: #fafafa;
+  padding: 4rem 0;
+
+  .title {
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1.4rem;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__img {
+    display: none;
+    @include small {
+      display: block;
+      width: 8.8rem;
+      height: 8.8rem;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  &__text {
+    margin-left: 2rem;
+    margin-right: 1.2rem;
+    padding: 0.75rem 2rem;
+    flex: 1;
+    background-color: #fff;
+    position: relative;
+    border: 2px solid #f2f2f2;
+    @include tablet {
+      order: 1;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      border-top: 0.4rem solid transparent;
+      border-right: 1rem solid #fff;
+      border-bottom: 0.4rem solid transparent;
+      border-left: 1rem solid transparent;
+      z-index: 2;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      border-top: 0.48rem solid transparent;
+      border-right: 1.08rem solid #f2f2f2;
+      border-bottom: 0.48rem solid transparent;
+      border-left: 1.08rem solid transparent;
+      z-index: 1;
+    }
+
+    &--right {
+      margin-left: 1.2rem;
+      margin-right: 2rem;
+      @include tablet {
+        order: 0;
+      }
+
+      &::before {
+        left: 100%;
+        border-right: 1rem solid transparent;
+        border-left: 1rem solid #fff;
+      }
+
+      &::after {
+        left: 100%;
+        border-right: 1.08rem solid transparent;
+        border-left: 1.08rem solid #f2f2f2;
+      }
+    }
+
+    p {
+      font-size: 1.6rem;
+      @include desktopLarge {
+        font-size: 22pt;
+      }
+
+      &:last-child {
+        font-size: 1.2rem;
+        margin-top: 0.75rem;
+        color: #7690c5;
+        @include desktopLarge {
+          font-size: 20pt;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2.4rem 0;
+  &__item {
+    flex-basis: 7rem;
+    padding: 0 0.6rem;
+    margin-bottom: 0.6rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.team {
+  background-color: #232323;
+  text-align: center;
+  color: #fff;
+  padding: 4rem 0;
+
+  &__slider {
+    overflow: hidden;
+    position: relative;
+
+    > button {
+      position: absolute;
+      color: #fff;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+      background-color: transparent;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      &:hover {
+        color: red;
+      }
+
+      &.next {
+        right: 0;
+      }
+      &.prev {
+        left: 0;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    color: #fff;
+    margin-top: 2.8rem;
+    margin-bottom: 2rem;
+  }
+
+  &__item {
+    min-width: 33.3334%;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img {
+    display: inline-block;
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    @include small {
+      width: 9.4rem;
+      height: 9.4rem;
+      border-width: 3px;
+    }
+  }
+
+  &__name {
+    font-family: 'Brandon Grotesque Bold';
+    margin-top: 0.4rem;
+    font-size: 1.5rem;
+    @include desktopLarge {
+      font-size: 20pt;
+    }
+  }
+
+  &__position {
+    font-family: 'Brandon Grotesque Regular';
+    margin-top: 0.4rem;
+    margin-bottom: 0.32rem;
+    font-size: 1rem;
+    @include desktopLarge {
+      font-size: 18pt;
+    }
+  }
+
+  &__info {
+    margin-top: auto;
+    button {
+      width: 25px;
+      height: 25px;
+      background-color: transparent;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      color: #fff;
+      @include small {
+        width: 30px;
+        height: 30px;
+      }
+      @include tablet {
+        width: 40px;
+        height: 40px;
+        border-width: 2px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 0.4rem;
+      }
+    }
+  }
+
+  &__desc {
+    font-size: 1rem;
+    line-height: 1.2;
+    @include desktopLarge {
+      font-size: 18pt;
+    }
+  }
+}
+
+.footer {
+  background-color: #7690c5;
+  color: #fff;
+  padding-top: 4rem;
+
+  .title {
+    p {
+      color: #fff;
+    }
+  }
+
+  &__content {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    @include tablet {
+      flex-basis: 49%;
+      &:last-child {
+        flex-basis: 45%;
+      }
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    &__social {
+      width: 50%;
+      display: flex;
+      font-size: 1.1rem;
+      margin-bottom: 1.6rem;
+      @include desktopLarge {
+        font-size: 18pt;
+      }
+
+      div {
+        width: 2rem;
+        @include tablet {
+          min-width: 30px;
+        }
+      }
+    }
+  }
+
+  input,
+  textarea {
+    width: 90%;
+    border: none;
+    outline: none;
+    margin-bottom: 0.75rem;
+    padding: 0.4rem;
+    border-radius: 2px;
+  }
+
+  &__bottom {
+    text-align: center;
+    font-family: 'Brandon Grotesque Medium';
+    margin-top: 4rem;
+    padding-bottom: 1.25rem;
+  }
+}
